@@ -1,0 +1,20 @@
+<ul>
+	<%= form_for @late_show do |f| %>
+		<li>
+			<%= f.label "Guest" %>
+			<%= f.collection_select :guests_id, Guest.all, :id, :name %>
+		</li>
+		<li>
+			<%= f.label "Episode" %>
+			<%= f.collection_select :episodes_id, Episode.all, :id, :number %>
+		</li>
+		<li>
+			<%= f.label :rating %>
+			<%= f.select :rating, [1, 2, 3, 4, 5] %>
+		</li>
+		<li>
+			<%= f.submit %>
+		</li>
+
+	<% end %>
+</ul>
