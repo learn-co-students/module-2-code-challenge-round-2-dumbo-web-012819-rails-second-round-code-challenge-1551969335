@@ -1,0 +1,12 @@
+<h1>Episode #<%= @episode.number %></h1>
+<hr>
+<%= link_to "Create a new appearance", new_appearance_url %>
+<hr>
+Guest Appearances:
+<ul>
+  <% @episode.guests.each do |gt| %>
+  <li>Name : <%= gt.name %></li>
+  <li>Rating : <%= gt.rating %></li>
+
+  <% end %>
+</ul>

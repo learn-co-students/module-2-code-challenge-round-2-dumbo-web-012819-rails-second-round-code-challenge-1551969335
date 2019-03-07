@@ -1,0 +1,12 @@
+<h1><%= @guest.name %></h1>
+<hr>
+<%= link_to "Create a new appearance", new_appearance_url %>
+<hr>
+Occupation : <%= @guest.occupation.capitalize %>
+<hr>
+Guest Appearance On:
+<ul>
+  <% @guest.episodes.each do |ep| %>
+  <li>Episode #<%= ep.number %></li>
+  <% end %>
+</ul>
